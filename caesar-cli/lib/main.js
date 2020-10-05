@@ -5,6 +5,7 @@ const { stderr } = require('process');
 const caesarCipherModule = require('./caesar-cipher');
 const pkg = require('../../package.json');
 const { Transformer } = require('./transform-stream/transform-stream');
+const path = require('path');
 
 const exitCodeError = 7;
 
@@ -43,13 +44,15 @@ async function caesarCipherCliAction(options) {
   if (!options.input) {
     input$ = process.stdin;
   } else {
-    input$ = fs.createReadStream(options.input, 'utf8');
+    inputPath = path.resolve(__dirname, options.input);
+    input$ = fs.createReadStream(inputPath, 'utf8');
   }
 
   if (!options.output) {
     output$ = process.stdout;
   } else {
-    output$ = fs.createWriteStream(options.output, 'utf8');
+    outputPath = path.resolve(__dirname, options.output);
+    output$ = fs.createWriteStream(outputPath, {encoding: 'utf8', flags: 'a+'});
   }
 
   const encodeTextFn = caesarCipherModule.generateTextEncoder(options.shift, options.action);
@@ -65,7 +68,7 @@ async function caesarCipherCliAction(options) {
     output$,
     (err) => {
       if (err) {
-        stderr.write(`Read/Write file Error! Error: ${err}\n`);
+        stderr.write(`Read/Write file Error! ${err}\n`);
         process.exit(exitCodeError);
       }
     },
