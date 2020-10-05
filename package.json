@@ -1,30 +1,31 @@
 {
-  "name": "caesar-cli",
+  "name": "caesar-cipher-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "cli app for encoding/decoding of ceasar code",
   "main": "index.js",
+  "bin": "/bin/cli",
   "preferGlobal": true,
-  "bin": "./bin/cli",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yafimchik/Caesar-cipher-CLI-tool.git"
+    "url": "git+https://github.com/yafimchik/caesar-cipher-cli.git"
   },
-  "author": "yafimchik",
+  "keywords": [
+    "caesar",
+    "cipher",
+    "cli"
+  ],
+  "author": "Yauheni Yafimenka",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yafimchik/Caesar-cipher-CLI-tool/issues"
+    "url": "https://github.com/yafimchik/caesar-cipher-cli/issues"
   },
-  "homepage": "https://github.com/yafimchik/Caesar-cipher-CLI-tool#readme",
-  "dependencies": {
-    "commander": "^6.1.0",
-    "inquirer": "^7.3.3"
-  },
-  "devDependencies": {
-    "eslint": "^7.10.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.1"
-  }
+  "homepage": "https://github.com/yafimchik/caesar-cipher-cli#readme"
 }
