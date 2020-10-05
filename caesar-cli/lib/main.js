@@ -3,7 +3,7 @@ const { pipeline } = require('stream');
 const fs = require('fs');
 const { stderr } = require('process');
 const caesarCipherModule = require('./caesar-cipher');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 const { Transformer } = require('./transform-stream/transform-stream');
 
 const exitCodeError = 7;

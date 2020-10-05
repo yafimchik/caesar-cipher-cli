@@ -2,8 +2,8 @@
   "name": "caesar-cipher-cli",
   "version": "1.0.0",
   "description": "cli app for encoding/decoding of ceasar code",
-  "main": "index.js",
-  "bin": "/bin/cli",
+  "main": "/caesar-cli/index.js",
+  "bin": "/caesar-cli/bin/cli",
   "preferGlobal": true,
   "directories": {
     "lib": "lib"
