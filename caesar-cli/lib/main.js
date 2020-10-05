@@ -49,7 +49,7 @@ async function caesarCipherCliAction(options) {
   if (!options.output) {
     output$ = process.stdout;
   } else {
-    output$ = fs.createWriteStream(options.output, 'utf8');
+    output$ = fs.createWriteStream(options.output, {encoding: 'utf8', flags: 'a+'});
   }
 
   const encodeTextFn = caesarCipherModule.generateTextEncoder(options.shift, options.action);
@@ -65,7 +65,7 @@ async function caesarCipherCliAction(options) {
     output$,
     (err) => {
       if (err) {
-        stderr.write(`Read/Write file Error! Error: ${err}\n`);
+        stderr.write(`Read/Write file Error! ${err}\n`);
         process.exit(exitCodeError);
       }
     },
