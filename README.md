@@ -1,16 +1,16 @@
-### caesar-cipher-cli
+## caesar-cipher-cli
 
-## Executable command file is:
+### Executable command file is:
 caesar-cli/bin/cli
 
-# CLI tool accepts 4 options (short alias and full name):
+#### CLI tool accepts 4 options (short alias and full name):
 
 -s, --shift: a shift
 -i, --input: an input file
 -o, --output: an output file
 -a, --action: an action encode/decode
 
-# Examples:
+#### Examples:
 
 > $ node ./caesar-cli/bin/cli --action encode --shift 7 --input plain.txt --output encoded.txt
 
