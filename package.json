@@ -1,0 +1,33 @@
+{
+  "name": "caesar-cipher-cli",
+  "version": "1.0.0",
+  "description": "cli app for encoding/decoding of ceasar code",
+  "main": "index.js",
+  "bin": "/bin/cli",
+  "preferGlobal": true,
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "commander": "^6.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yafimchik/caesar-cipher-cli.git"
+  },
+  "keywords": [
+    "caesar",
+    "cipher",
+    "cli"
+  ],
+  "author": "Yauheni Yafimenka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yafimchik/caesar-cipher-cli/issues"
+  },
+  "homepage": "https://github.com/yafimchik/caesar-cipher-cli#readme"
+}
